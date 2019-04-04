@@ -123,6 +123,10 @@ func Fatalf(format string, args ...interface{}) {
 	logrus.Fatalf(format, args...)
 }
 
+func Fatalln(args ...interface{}) {
+	logrus.Fatalln(args...)
+}
+
 func AddHookFormatter(logger *logrus.Logger) {
 	logger.Hooks.Add(new(hooks.CallerHook))
 
