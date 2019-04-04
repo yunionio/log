@@ -10,9 +10,10 @@ jobs:
     working_directory: /go/src/yunion.io/x/log
     steps:
       - checkout
+      - run: go get -v -t -d ./...
       - run:
           command: |
-            go test -v yunion.io/x/log
+            go test -v ./...
 
 workflows:
   version: 2
